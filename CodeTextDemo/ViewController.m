@@ -36,7 +36,6 @@
     // --------------------------------------------------------------------
     
     UILabel *labA = [UILabel new];
-    labA.hidden = YES;
     labA.textColor = [UIColor orangeColor];
     labA.font = [UIFont systemFontOfSize:13];
     labA.text = @"基本实现原理 - 下划线";
