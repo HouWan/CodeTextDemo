@@ -8,6 +8,7 @@
 
 ![效果图](https://github.com/HouWan/CodeTextDemo/blob/master/wx20180926_130752_2x-qibot.cn.png)
 
-简书地址：[点我](https://www.jianshu.com/)
+简书地址：[点我](https://www.jianshu.com/p/23f7be3677be)
+简书地址：[点我](https://www.jianshu.com/p/23f7be3677be)
 
 
