@@ -16,6 +16,7 @@
 		87BA7284215B3E3B00A6911D /* HWTFCodeBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BA727E215B3E3B00A6911D /* HWTFCodeBView.m */; };
 		87BA7285215B3E3B00A6911D /* HWTFCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BA727F215B3E3B00A6911D /* HWTFCodeView.m */; };
 		87BA7286215B3E3B00A6911D /* HWTextCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BA7280215B3E3B00A6911D /* HWTextCodeView.m */; };
+		87DCFBBE21C26B2100D4C08D /* HWTFCursorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DCFBBD21C26B2100D4C08D /* HWTFCursorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		87BA7281215B3E3B00A6911D /* HWTFCodeBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTFCodeBView.h; sourceTree = "<group>"; };
 		87BA7282215B3E3B00A6911D /* HWTextCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTextCodeView.h; sourceTree = "<group>"; };
 		87BA7283215B3E3B00A6911D /* HWTFCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTFCodeView.h; sourceTree = "<group>"; };
+		87DCFBBC21C26B2100D4C08D /* HWTFCursorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWTFCursorView.h; sourceTree = "<group>"; };
+		87DCFBBD21C26B2100D4C08D /* HWTFCursorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWTFCursorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				87BA727E215B3E3B00A6911D /* HWTFCodeBView.m */,
 				87BA7283215B3E3B00A6911D /* HWTFCodeView.h */,
 				87BA727F215B3E3B00A6911D /* HWTFCodeView.m */,
+				87DCFBBC21C26B2100D4C08D /* HWTFCursorView.h */,
+				87DCFBBD21C26B2100D4C08D /* HWTFCursorView.m */,
 			);
 			path = CodeTextView;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				87BA726C215B3DC200A6911D /* ViewController.m in Sources */,
 				87BA7277215B3DC300A6911D /* main.m in Sources */,
 				87BA7269215B3DC200A6911D /* AppDelegate.m in Sources */,
+				87DCFBBE21C26B2100D4C08D /* HWTFCursorView.m in Sources */,
 				87BA7284215B3E3B00A6911D /* HWTFCodeBView.m in Sources */,
 				87BA7286215B3E3B00A6911D /* HWTextCodeView.m in Sources */,
 			);
