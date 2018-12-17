@@ -21,6 +21,9 @@
 
 @property (nonatomic, strong) NSMutableArray<UIView *> *lines;
 
+// 输入指示器
+@property (nonatomic, strong) UIView *cursorView;
+
 @end
 
 @implementation HWTFCodeView
@@ -63,6 +66,14 @@
     [maskView addTarget:self action:@selector(clickMaskView) forControlEvents:(UIControlEventTouchUpInside)];
     [self addSubview:maskView];
     self.maskView = maskView;
+
+    _cursorView = [[UIView alloc] init];
+
+    _cursorView.frame = CGRectMake(0, 0, 2, 25);
+    _cursorView.backgroundColor = [UIColor blueColor];
+    [self addSubview:_cursorView];
+    [self cursorViewAnimation:_cursorView];
+
     
     for (NSInteger i = 0; i < self.itemCount; i++)
     {
@@ -102,7 +113,13 @@
         
         UIView *line = self.lines[i];
         line.frame = CGRectMake(x, self.bounds.size.height - 1, w, 1);
+        if (i == 0 ) {
+            _cursorView.center = label.center;
+        }
     }
+
+    [self bringSubviewToFront:_cursorView];
+
     
     self.textField.frame = self.bounds;
     self.maskView.frame = self.bounds;
@@ -113,6 +130,7 @@
 {
     if (textField.text.length > self.itemCount) {
         textField.text = [textField.text substringWithRange:NSMakeRange(0, self.itemCount)];
+        [_cursorView setHidden:YES];
     }
     
     for (int i = 0; i < self.itemCount; i++)
@@ -129,6 +147,11 @@
     // 输入完毕后，自动隐藏键盘
     if (textField.text.length >= self.itemCount) {
         [textField resignFirstResponder];
+        [_cursorView setHidden:YES];
+    } else  {
+        [_cursorView setHidden:NO];
+        UILabel *label = [self.labels objectAtIndex:textField.text.length];
+        _cursorView.center = label.center;
     }
 }
 
@@ -146,6 +169,17 @@
 - (NSString *)code
 {
     return self.textField.text;
+}
+
+- (void)cursorViewAnimation:(UIView*)view {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    animation.duration = .6;
+    animation.repeatCount = HUGE_VAL;
+    animation.fromValue = @(0.9);
+    animation.autoreverses = YES;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.toValue = @(0);
+    [view.layer addAnimation:animation forKey:@"textfield.opacity"];
 }
 
 @end
